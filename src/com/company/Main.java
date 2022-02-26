@@ -14,16 +14,25 @@ public class Main {
 
         System.out.println("\nVector inicial hasta :"+dato);
 
+        impirmirVectorInicial(vector);
+
+        vector=generarPrimos(dato);
+        System.out.println("\nVector de primos hasta:"+dato);
+
+
+        imprimirVectorFinal(vector);
+    }
+
+    private static void impirmirVectorInicial(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i % 10 == 0) {
                 System.out.println();
             }
             System.out.print( i + 1 + "\t" );
         }
+    }
 
-        vector=generarPrimos(dato);
-        System.out.println("\nVector de primos hasta:"+dato);
-
+    private static void imprimirVectorFinal(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i % 10 == 0) {
                 System.out.println();
@@ -31,6 +40,7 @@ public class Main {
             System.out.print(vector[i]+"\t");
         }
     }
+
     // Generar números primos de 1 a max
     public static int[] generarPrimos (int max)
     {
