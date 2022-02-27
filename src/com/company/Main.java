@@ -2,12 +2,17 @@ package com.company;
 
 import java.util.Scanner;
 
+/**
+ *Esta clase sirve para sacar los numeros primos desde el uno hasta el numero indicado.
+ * @author David Balaguer
+ *
+ */
 public class Main {
 
     public static void main(String[] args) {
 
         Scanner teclado=new Scanner(System.in);
-        System.out.println("Introduce el número para la criba de Erastótenes:");
+        System.out.println("Introduce el numero para la criba de Erastótenes:");
         int dato = teclado.nextInt();
 
         int[] vector = new int[dato];
@@ -22,7 +27,10 @@ public class Main {
 
         imprimirVectorFinal(vector);
     }
-
+    /*
+    En esta método se imprime el vector inicial con todos los numeros desde el uno hasta el numero indicado
+    anteriormente
+     */
     private static void impirmirVectorInicial(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i % 10 == 0) {
@@ -31,7 +39,9 @@ public class Main {
             System.out.print( i + 1 + "\t" );
         }
     }
-
+    /*
+    En este método se imprime el vector el cual contiene todos los números primos que había en el vector inicial
+     */
     private static void imprimirVectorFinal(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i % 10 == 0) {
@@ -41,6 +51,11 @@ public class Main {
         }
     }
 
+    /**
+     * En este metodo se generan los numeros primos del 1 a el valor maximo indicado en el parametro max.
+     * @param max Este es el valor maximo hasta el cual se van a generar todos los numeros primos.
+     * @return Este metodo devuelve un vector con todos los numeros primos.
+     */
     // Generar números primos de 1 a max
     public static int[] generarPrimos (int max)
     {
